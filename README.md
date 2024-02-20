@@ -42,7 +42,7 @@ sudo systemctl start docker
 
 ```bash
 cd ec2-develop
-DOCKER_BUILDKIT=1 docker build .
+DOCKER_BUILDKIT=1 docker build -t ec2-develop:latest .
 ```
 
 ### Utilize the newly setup docker environment
