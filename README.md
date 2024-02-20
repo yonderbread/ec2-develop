@@ -1,6 +1,7 @@
 # Setting up Docker development enviorment
 Before deploying the docker container, install the required packages.
 
+1. Add docker official repo to apt
 ```bash
 # Add Docker's official GPG key:
 sudo apt-get update
@@ -17,9 +18,25 @@ echo \
 sudo apt-get update
 ```
 
-Move into directory with Docker file and build the image.
+2. Install the packages
+```bash
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+3. Make sure to enable buildkit in `/etc/docker/daemon.json`
+```json
+{
+    "features": {
+        "buildkit": true
+    }
+}
+```
+
+4. Move into directory with Docker file and build the image.
 
 ```bash
 cd ec2-develop
 DOCKER_BUILDKIT=1 docker build .
 ```
+
+# Utilize the newly setup docker enviorment
