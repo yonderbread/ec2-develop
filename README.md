@@ -1,4 +1,4 @@
-##### Setting up Docker development enviorment
+### Setting up Docker development enviorment
 Before deploying the docker container, install the required packages.
 
 1. Add docker official repo to apt
@@ -45,7 +45,7 @@ cd ec2-develop
 DOCKER_BUILDKIT=1 docker build .
 ```
 
-##### Utilize the newly setup docker enviorment
+### Utilize the newly setup docker enviorment
 
 6.Enter bash shell inside newly created container
 ```bash
