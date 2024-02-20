@@ -50,4 +50,4 @@ DOCKER_BUILDKIT=1 docker build -t ec2-develop:latest .
 6. Enter bash shell inside newly created container
 ```bash
 sudo docker run -it ec2-develop:latest /bin/bash
-```sudo docker run -it ec2-develop:latest /bin/bash
+```
